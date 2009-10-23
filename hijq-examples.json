@@ -1,0 +1,194 @@
+[
+  {
+    "note":"List all properties of /common/topic",
+    "categories": [ "read", "structural" ],
+    "query":[
+      {
+        "id":"/common/topic",
+        "type":"/type/type",
+        "properties":[
+          {
+            "expected_type":null,
+            "name":null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "note":"Expand properties of /common/topic into full objects",
+    "categories": [ "read", "structural" ],
+    "query":[
+      {
+        "id":"/common/topic",
+        "type":"/type/type",
+        "properties":[{}]
+      }
+    ]
+  },
+  {
+    "note":"List all types created by user 'jamie'",
+    "categories": [ "read", "general" ],
+    "query":[
+      {
+        "creator":"/user/jamie",
+        "type":"/type/type",
+        "name":null
+      }
+    ]
+  },
+  {
+    "note":"List up to 50 topics created by user 'jamie'",
+    "categories": [ "read", "general" ],
+    "query":[
+      {
+        "creator":"/user/jamie",
+        "type":"/common/topic",
+        "id":null,
+        "name":null,
+        "limit":50
+      }
+    ]
+  },
+  {
+    "note":"Properties of /music/artist",
+    "categories":[ "read", "music", "structural" ],
+    "query":[
+      {
+        "id":"/music/artist",
+        "type":"/type/type",
+        "properties":[]
+      }
+    ]
+  },
+  {
+    "note":"Metaweb ID of The Police",
+    "categories":[ "read", "music"],
+    "query":{
+      "type":"/music/artist",
+      "name":"The Police",
+      "id":null
+    }
+  },
+  {
+    "note":"List all Releases by The Police",
+    "categories": [ "read", "music" ],
+    "query":[
+      {
+        "type":"/music/artist",
+        "name":"The Police",
+        "album":[]
+      }
+    ]
+  },
+  {
+    "note":"2 of The Police's albums and their tracks",
+    "categories": [ "read", "music" ],
+    "query":{
+      "type":"/music/artist",
+      "name":"ZZ Top",
+      "id":null,
+      "album":[
+        {
+          "id":null,
+          "track":[],
+          "name":null,
+          "limit":2
+        }
+      ]
+    }
+  },
+  {
+    "note":"List 25 albums and artists who have released a version of the song 'Roxanne'",
+    "categories": [ "read", "music" ],
+    "query":[
+      {
+        "type":"/music/track",
+        "name":"Roxanne",
+        "album":{
+          "name":null,
+          "release_date":null
+        },
+        "artist":null,
+        "limit":25
+      }
+    ]
+  },
+  {
+    "note":"List 25 Songs with the word 'love' in the title, with release date, album and artist",
+    "categories": [ "read", "music" ],
+    "query":[
+      {
+       "type":"/music/track",
+       "name~=":"Love*",
+       "name":null,
+       "album":{
+         "name":null,
+         "release_date":null,
+         "artist":null
+    },
+    "limit":25
+      }
+    ]
+  },
+  {
+    "note":"The albums and track length for the track 'Angel' recorded by Jimi Hendrix",
+    "categories": [ "read", "music" ],
+    "query":{
+      "type":"/music/artist",
+      "name":"Jimi Hendrix",
+      "album":[
+        {
+          "track":{
+            "name":"Angel",
+            "length":null
+          },
+          "name":null
+        }
+      ]
+    }
+  },
+  {
+    "note":"Add the band 'Metaband'",
+    "categories": [ "write", "music" ],
+    "query":[
+      {
+        "type":"/music/artist",
+        "name":"Metaband",
+        "id":null,
+        "insert":["unique"]
+      }
+    ]
+  },
+  {
+    "note":"Add an album 'Songs about music' by the band 'Metaband' with a release date",
+    "categories": [ "write", "music" ],
+    "query":[
+      {
+        "type":"/music/artist",
+        "name":"Metaband",
+        "album":{
+          "type":"/music/album",
+          "name":"Songs about music",
+          "release_date":"2006-07-16",
+          "insert":["connect"]
+        }
+      }
+    ]
+  },
+  {
+    "note":"Delete the link between the band 'Metaband' and the album 'Songs about music'",
+    "categories": [ "write", "music" ],
+    "query":[
+      {
+        "type":"/music/artist",
+        "name":"Metaband",
+        "album":{
+          "name":"Songs about music",
+          "release_date":"2006-07-16",
+          "delete":["connect"]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,146 @@
+Search query
+{
+  "actors":[{
+    "/common/topic/image":[{
+      "guid":null,
+      "limit":1,
+      "optional":true
+    }],
+    "guid":null,
+    "limit":5,
+    "name":null,
+    "name~=":"Blue",
+    "sort":"name",
+    "type":"/film/actor"
+  }],
+  "directors":[{
+    "/common/topic/image":[{
+      "guid":null,
+      "limit":1,
+      "optional":true
+    }],
+    "guid":null,
+    "limit":5,
+    "name":null,
+    "name~=":"Blue",
+    "sort":"name",
+    "type":"/film/director"
+  }],
+  "films":[{
+    "/common/topic/image":[{
+      "guid":null,
+      "limit":1,
+      "optional":true
+    }],
+    "guid":null,
+    "limit":5,
+    "name":null,
+    "name~=":"Blue",
+    "sort":"name",
+    "type":"/film/film"
+  }]
+}
+
+
+Movie Query
+{
+  "query":[{
+    "/common/topic/image":[{
+      "guid":null,
+      "limit":1,
+      "optional":true
+    }],
+    "directed_by":[{
+      "/common/topic/image":[{
+        "guid":null,
+        "optional":true
+      }],
+      "guid":null,
+      "name":null,
+      "sort":"name",
+      "type":"/film/director"
+    }],
+    "guid":"#9202a8c04000641f8000000000065fe4",
+    "initial_release_date":null,
+    "runtime":null,
+    "starring":[{
+      "actor":{
+        "/common/topic/image":[{
+          "guid":null,
+          "limit":1,
+          "optional":true
+        }],
+        "guid":null,
+        "name":null,
+        "sort":"name",
+        "type":"/film/actor"
+      }
+    }],
+    "type":"/film/film"
+  }]
+}
+
+
+Artist Search Query
+{
+  "query":[{
+    "active_end":{
+      "value":null
+    },
+    "active_start":{
+      "value":null
+    },
+    "guid":null,
+    "name":null,
+    "name~=":"*meta*",
+    "sort":"name",
+    "type":"/music/artist"
+  }]
+}
+
+Artist Search with at least 1 album release date
+{
+  "query":[{
+    "album":[{
+      "limit":1,
+      "release_date":{
+        "value":null
+      }
+    }],
+    "guid":null,
+    "limit":1000,
+    "name~=":"stone*",
+    "name":null,
+    "sort":"name",
+    "type":"/music/artist"
+  }]
+}
+
+{
+  "decade0":{
+    "query":[{
+      "active_start":[{
+        "value<":"1980",
+        "value>=":"1970",
+        "value":null
+      }],
+      "album":[{
+        "limit":1,
+        "release_date":{
+          "value<":"1980",
+          "value>=":"1970",
+          "value":null
+        }
+      }],
+      "genre":[{
+        "guid|=":["#9202a8c04000641f80000000000e3f3b","#9202a8c04000641f80000000001b7b21"],
+        "guid":null
+      }],
+      "guid":null,
+      "limit":1000,
+      "name":null,
+      "sort":"name",
+      "type":"/music/artist"
+    }]
+  }
+}

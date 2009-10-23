@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Copyright 2007 Metaweb Technologies, Inc.  All Rights Reserved. -->
+<html>
+  <head>
+    <title>Metaweb MQL Query Editor</title>
+	<script type="text/javascript" src="library_22/settings.js"></script>
+    	<script type="text/javascript" src="library_22/framework.js"></script>    
+    	<script type="text/javascript" src="library_22/core/util/Delegate.js"></script>
+    	<script type="text/javascript" src="library_22/core/httprequest/HTTPRequest.js"></script>
+    	<script type="text/javascript" src="library_22/core/events/DOMEvent.js"></script>
+    	<script type="text/javascript" src="library_22/core/util/DOMUtils.js"></script>
+    	<script type="text/javascript" src="library_22/core/util/JSONUtils.js"></script>
+    	<script type="text/javascript" src="queryeditor.js"></script>
+
+	
+
+	<link href="queryeditor.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+	<div id="smallheader">
+		<table>
+			<tbody>
+				<tr>
+					<td><img usemap="#logo" src="images/mw_logo.gif" /><map name="logo"><area shape="rect" coords="0,0,92,32" href="/view/" alt=""/></map></td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- end header -->
+<div id="content">
+ <table>
+  <tr>
+  	<td class="tableHeader">
+    <button id="writeButton" onclick="runQuery(1)">write >></button>
+      <button id="readButton" onclick="runQuery()">read >></button>
+
+      <span id="hiLoSwitch">
+     <input disabled="true" class="radioButton" type="radio" name="hiLoSwitch" id="loButton" value="lo" onclick="syntaxSwitch('lo')"/>
+        <label for="loButton" id="loButtonLabel">lojson</label>
+        <input class="radioButton" type="radio" name="hiLoSwitch" id="hiButton" value="hi" checked="yes" onclick="syntaxSwitch('hi')"/>
+        <label for="hiButton" id="hiButtonLabel">MQL</label>
+      </span>
+      <button id="formatButton" onclick="format()">format</button>
+      <button id="unFormatButton" onclick="unformat()">unformat</button>
+      <button id="clearButton" onclick="clearAll()">clear</button>
+    </td>
+    <td class="tableHeader"><div id="tableTitle">query editor</div></td>
+  </tr>
+  <tr height="100%">
+    <!-- queryPane -->
+  	<td id="queryPane">
+      <div id="queryPaneDiv">
+
+<textarea id="queryText">
+
+</textarea>
+        <!-- <div id="thumb"><div class="grip"><div></div></div></div> -->
+        <div class="Container" id="examples"></div>
+
+      </div>
+    </td>
+    <!-- resultPane -->
+  	<td id="resultPane">
+      <div id="resultPaneDiv">
+        <!-- ie fix -->
+        <div id="resultPaneToolbar">
+          <button id="graphViewButton" onclick="viewMQLViz()">view in MQLViz ^</button>
+        </div>
+        <div class="Container" id="status"></div>
+        <div class="Container" id="messages"></div>
+        <div class="Container" id="treeView"></div>
+        <div class="Container" id="result"></div>
+        <div class="Container" id="jsonResult"></div>
+        <div class="Container" id="stats"></div>
+
+      </div>
+
+    </td>
+  </tr>
+  </table>
+	<div id="footer"><ul><li><a href="/view/">Home</a></li><li><a href="/view/allDomains">Domains</a></li></ul></div>
+	</div>
+
+	
+  </body>
+</html>

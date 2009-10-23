@@ -1,0 +1,559 @@
+/***
+basics
+***/
+body {
+	/* background: #213039; */
+	background: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;	
+	font-size: 85%;
+	color: #000000;	
+}
+
+/*b/c ie doesn't cascade everything*/
+body table,
+body li {
+	font-size: 1em;
+  	font-family: Arial, Helvetica, sans-serif;	
+	color: #000000;
+}
+#content {
+	background: white;
+}
+
+#rightGutter {
+	background: url('/resources_22/images/templates/shared/blue_right_bkd.gif') repeat-x top;
+}
+#rightGutterContent {
+	background: url('/resources_22/images/templates/shared/blue_right_corner.gif') no-repeat top right;
+}
+
+#leftGutter {
+	background: url('/resources_22/images/templates/filter/gray_left_bkd.gif') repeat-x top;	
+}
+
+#leftGutterContent {
+	background: url('/resources_22/images/templates/shared/yellowgray_top_left_corner.gif') no-repeat top left;
+}
+#fullPage {
+	background: url('/resources_22/images/templates/shared/yellowwhite_top_left_corner.gif') no-repeat top left;
+}
+
+
+/***
+links
+***/
+a:link {
+  color: #005ecd;
+  text-decoration: none;
+}
+a:visited {
+  color: #6b4489;
+  text-decoration:none;
+}
+a:hover {
+  color: #006ee9;
+  text-decoration: underline;
+}
+
+a.stublink {
+  color: #a32100;
+  text-decoration:none;
+}
+
+a.stublink:hover {
+	text-decoration: underline;
+}
+
+a.stublink:visited {
+	color: #c45032;
+	text-decoration: none;
+}
+
+/* buttons that should be links */
+#showHiddenProperties,
+.ExpandArticle {
+	margin: 0px;
+	cursor: pointer;
+	border: 0px !important;
+	color: #005bc1 !important;
+	width: auto;/*for ie6*/
+	overflow: visible;
+	padding-bottom: 0px;
+}
+.ExpandArticle {
+	background:none !important;
+}
+
+#showHiddenProperties:hover .ButtonLabel,
+.ExpandArticle:hover .ButtonLabel,
+.moreButton:hover,
+.emptyMessageAdd:hover {
+	text-decoration:underline;
+	color: #006ee9;
+}
+
+#showHiddenProperties:focus,
+.ExpandArticle:focus {
+	outline:none;
+}
+/*moreButton*/
+.moreButton,
+.emptyMessageAdd {
+	color: #005bc1;
+}
+.emptyMessageAdd {
+	font-style:italic;
+}
+
+/***
+header
+***/
+#header {
+	background: url('/resources_22/images/chrome/header_bkd.gif') repeat-x white;
+	height: 72px;
+}
+
+#header table {
+	background: url('/resources_22/images/chrome/header_right_bkd.gif') top right no-repeat;
+	height: 72px;
+}
+/*logo size and img*/
+#header #logo {
+	width: 128px;
+	height: 72px;
+}
+
+#header img {
+	border: 0px;
+}
+
+/*nav and signup area*/
+#header #signup {
+	color: #f5f5f5;
+}
+
+#header #signup a {
+	color: #f2c488;
+}
+
+#header #centerbkd {
+	background: url('/resources_22/images/chrome/header_center_bkd.gif') no-repeat top left;
+	height: 72px;
+}
+
+/*Search*/
+
+#header #search {
+	background: url('/resources_22/images/chrome/search_bkd.gif') no-repeat bottom right;
+}
+
+.SearchBox .TextInput input {
+	border-color: #565656;	
+	color: #767676;
+}
+.SearchBox button {
+	border: 1px solid #565656;
+}
+
+
+/***
+footer
+***/
+#basicfooter,
+#footer {
+	background: white;
+}
+
+
+#basicfooter #cc,
+#footer #cc {
+	color: #777777;
+}
+
+#basicfooter #cc a,
+#footer #cc a {
+	color: #898989;
+}
+
+/***
+basic low-level components
+***/
+/*text input*/
+.AutocompleteInput input,
+.TextInput input,
+.PasswordInput input,
+.MetawebImageDialog input,
+.DateTimeInput input,
+.EnumInput input {
+	border: 1px solid #9a9a9a;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.AutocompleteInput input:focus,
+.TextInput input:focus,
+.PasswordInput input:focus,
+.MetawebImageDialog input:focus,
+.DateTimeInput input:focus,
+.EnumInput input:focus {
+	outline:  1px solid #006ee9;
+} 
+
+.AutocompleteInput input {
+	background: url('/resources_22/images/components/editform/autocomplete_bkd.gif') no-repeat top left #ffffff;
+	text-indent: 3px;
+}
+
+/*need to put in background image here*/
+.EnumInput input {
+	background: url('/resources_22/images/components/editform/enum_bkd.png') no-repeat top right #ffffff;
+	padding-right: 40px;	
+}
+
+.TextInput input,
+.PasswordInput input,
+.DateTimeInput input,
+.MetawebImageDialog input {
+	background: #fff url('/resources_22/images/chrome/form_bkd.gif')  repeat-x;
+}
+
+.editFormDiv .Button,
+.editFormDiv .TextInput input,
+.editFormDiv .PasswordInput input,
+.editFormDiv .DateTimeInput input,
+.editFormDiv .AutocompleteInput input,
+.editFormDiv .EnumInput input {
+	border: 1px solid #565656;
+}
+
+.editFormDiv .Button.disabled {
+	border: 1px solid #d0d0d0;
+}
+
+.disabled input {
+	border: 1px solid #bcbcbc !important; /*override border on .TextInput*/
+}
+.editFormDiv .disabled {
+	color:#9a9a9a;
+}
+
+
+/*Buttons*/
+.Button {
+	background: url(/resources_22/images/chrome/button_bkd.gif) bottom left repeat-x white;
+	color: black;
+	border: 1px solid #9a9a9a;
+	font-family: Arial, Helvetica, sans-serif;
+}
+button.disabled {
+	background-color:#eee;
+	color:#ccc;
+	border: 1px solid #d0d0d0;
+}
+button:focus,
+.readOnly #discuss button:focus,
+.readOnly #instances button:focus {
+	outline:  1px solid #006ee9;
+}
+
+/*show/hide button*/
+#showHiddenProperties {
+	margin-left: 10px;
+}
+#showHiddenProperties .ButtonLabel {
+	margin-left: 17px;
+}
+.ShowFields {
+	background: url('/resources_22/images/templates/shared/show_empty_fields.gif') left center no-repeat  !important;
+}
+.HideFields {
+	background: url('/resources_22/images/templates/shared/hide_empty_fields.gif') left center no-repeat !important;
+}
+
+
+/*Menus*/
+.AutocompleteList .listItemSelected,
+.EnumList .listItemSelected { 
+  background-color:#97bedf;
+  color: #000000;
+}
+.AutocompleteList li:hover,
+.EnumList li:hover,
+* html .AutocompleteList .listItemHover,
+* html .EnumList .listItemHover {
+	background-color: #c1e1fd;
+}
+ 
+.PopupMenu li:hover,
+.selectMenuOpen li:hover,
+* html .PopupMenu .listItemHover,
+* html .selectMenuOpen .listItemHover { 
+	background-color:#97bedf;
+	color: #000000;
+	text-decoration: none;
+}
+
+/*collection titles*/
+.MenuLabel {
+	color: #275789;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#rightGutter .MenuLabel {
+	color: #275789;
+}
+#leftGutter .MenuLabel {
+	color: #6f6f6f;
+}
+
+
+
+#PageTitle .MenuLabel{
+	color: black;
+}
+#attributes .MenuLabel {
+	color: black;
+}
+#breadcrumb  {
+	color: white !important;
+	background: url('/resources_22/images/templates/shared/yellow_gradient.jpg') no-repeat top left white;
+}
+
+#breadcrumb #PageTitle {
+	background: url('/resources_22/images/templates/shared/white_right_corner.gif') no-repeat top right;	
+}
+
+/*hover and focus on titles*/
+.PopupMenuLabel:hover,
+.readOnly #discuss .PopupMenuLabel:hover,
+.readOnly #instances .PopupMenuLabel:hover,
+* html .popupMenuLabelHover,
+* html .readOnly #discuss .popupMenuLabelHover,
+* html .readOnly #instances .popupMenuLabelHover {
+	background: url(/resources_22/images/chrome/button_bkd.gif) bottom left repeat-x white;
+	border: 1px solid #9a9a9a;
+}
+
+#PageTitle .PopupMenuLabel:hover,
+*html #PageTitle .popupMenuLabelHover {/*turn off hover on title*/
+	background:none;
+	border: none;
+}
+.MenuLabel:focus,
+.readOnly #discuss .MenuLabel:focus,
+.readOnly #instances .MenuLabel:focus {/*when focus goes back to title, add background*/
+	background: url(/resources_22/images/chrome/button_bkd.gif) bottom left repeat-x white;
+}
+
+
+/***
+List Collections
+***/
+.emptyMessage{
+	color: #7d7d7d;
+	font-style: italic;
+}
+.EmptyMessageContainer:hover,
+.EditableArticle:hover {
+	background-color: #efefef;
+}
+/*list item menus*/
+.hover-div-inline,
+.hover-div-block {
+	background-color: #dbe7f2;
+	border-bottom: 1px solid #999999;
+	border-right: 1px solid #999999;
+}
+.hover-div-shadow {
+}
+.hover-div-inner {
+}
+.hover-div-menu {
+	background-color: white !important;
+}
+.hover-div-menu:hover {
+	background: url(/resources_22/images/components/shared/menu_carat_selected.gif) #006ee9 no-repeat 50% 50% !important;
+}
+
+
+/*reorder list */
+#reorderList li:hover,
+* html #reorderList .listItemHover{
+	background-color:#b5c9e2;
+}
+#reorderList .listItemSelected{
+	background-color:#8fc3f3;
+}
+#reorderList  li{
+	background-color:#e8f4ff;
+}
+
+/*PreviewList & UserList*/
+.PreviewListItem .Label,
+.MetawebUserListItem .Label {
+	font-weight:bold;
+}
+
+.PreviewListItem .TypeList {
+	font-weight:normal !important;
+	font-style: italic;
+	color: #9a9a9a;
+}
+
+.PreviewImage img {
+	border: 1px solid #c8c8c3;
+	background-color: #fff;
+}
+
+.MetawebUserCollection .EmptyImage .ImageDiv,
+.MetawebDiscussCollection .EmptyImage .ImageDiv{
+	border: 1px solid #c8c8c3;
+}
+
+.SimpleMetawebListItem .count {
+	font-size: .85em;
+	color: #9a9a9a;
+}
+
+/***
+Image Flipbook
+***/
+.ImageFlipbook {
+	border: 1px solid #ececec;
+	background:#ffffff; 
+}
+
+/***
+Article Collection tabs
+***/
+.ArticleCollection .HTMLListItem {
+	border: 0px;
+}
+/*turn off tab look on single article, if showing*/
+.singleArticle .tabs, 
+.singleArticle .tabPadder,
+.singleArticle .tabs li, 
+.singleArticle .tabs li.listItemSelected span,
+.singleArticle .tabs li.listItemSelected em {
+	background:none !important;
+}
+.singleArticle .tabs span,
+.singleArticle li.listItemSelected em {
+	font-size: 1.1em;
+	font-weight:bold;
+	color: #275789 !important;
+}
+.singleArticle .header {
+	border:none !important;
+}
+
+/*normal tabs*/
+.ArticleCollection .header {
+	border-bottom: 1px solid #d8d8d8;
+}
+.tabs {
+	background: url('/resources_22/images/components/shared/tab_back_left.gif') no-repeat top left;
+}
+.tabPadder { 
+	background: url('/resources_22/images/components/shared/tab_back_right.gif') no-repeat top right;
+}
+.ArticleCollection .tabs li {
+	background:  url('/resources_22/images/components/shared/tab_back.gif') repeat-x top;
+	border-top: 1px solid #cecece;
+}
+
+.ArticleCollection .tabs li.listItemSelected {
+	border-top: none;
+}
+.tabs span { /* text on the tabs */
+	text-decoration: none;
+	color: #005bc1;
+	font-size: .9em;
+}
+.tabs li.listItemSelected span {
+	background: url('/resources_22/images/components/shared/tab_on_left.gif') no-repeat top left;
+}
+.tabs li.listItemSelected em {
+	color: #456a15;
+	background: url('/resources_22/images/components/shared/tab_on_right.gif') no-repeat top right;
+}
+
+/*toolbar*/
+.ArticleContentToolbar {
+}
+
+/***
+Text Area
+***/
+.EditableMetawebText .title {
+	font-size: 1.2em;
+	font-weight:bold;
+	color: #275789 !important;
+}
+
+/***
+Filtering
+***/
+/*criteria pane*/
+#FilterCriteria {
+	background: url('/resources_22/images/templates/filter/filter_top_left_corner.gif') no-repeat top left #d9d9d9;
+}
+#FilterCriteria h1 {
+	font-size: 1.2em;
+	color: #9e6c27;
+}
+.FilterPropertyListItem .Label {
+	color: #6f6f6f;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+/*criteria*/
+.FilterCriteriaListItem .Label {
+	font-size: .9em;
+	font-weight:bold;
+}
+.FilterCriteriaListItem .DeleteButton {
+	background: url(/resources_22/images/templates/filter/delete.gif) no-repeat top #d9d9d9 !important;
+	border: 0px !important;
+
+}
+
+
+/***
+ Error and success messages 
+***/
+.DateTimeInput .errormessage {
+	border: none;
+	background:none;
+}
+
+.errormessage {
+	border: 1px solid #B03C1F;
+	color: #B03C1F;
+	background: url('/resources_22/images/templates/shared/error_message_icon.gif') no-repeat 8px 8px #FFAD9F;
+}
+
+.successmessage,
+#successmessage {
+	border: 1px solid #6A7A39;
+	color: #6A7A39;
+	background: url('/resources_22/images/templates/shared/success_message_icon.gif') no-repeat 8px 8px #DBE5C1;
+}
+
+.progressmessage {
+	background: url('/resources_22/images/components/overlays/wait.gif') no-repeat 8px 5px #efefef;
+	border: 1px solid #bfbfbf;
+	color: #777777;
+	padding-left: 40px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

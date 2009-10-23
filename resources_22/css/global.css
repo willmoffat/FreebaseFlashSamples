@@ -1,0 +1,282 @@
+/***
+basics
+***/
+
+body {
+  	margin: 0px;
+  	min-width: 850px;
+}
+/*setting width in ie6*/
+* html body {
+	margin: auto;
+	text-align: center;
+}
+* html #header,
+* html #content,
+* html #footer {
+	width: 100%;
+	margin: 0px auto;
+	text-align: left;
+}
+
+a {
+/*	cursor: hand;not all links are getting the right cursor*/
+}
+
+img {
+	border: 0px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#container { 
+	padding: 0px;
+	min-height: 400px;
+}
+* html #container { 
+	height: 400px;
+}
+
+/***
+Columns and gutters
+***/
+/*for right gutter layout*/
+#bigLeftColumn {
+	float: left;
+	width: 61%;
+	margin-top: 20px;
+	padding-left: 25px;
+}
+#bigLeftColumn p {
+	line-height: 160%;
+}
+
+#bigLeftColumn #discuss {
+	margin-top: 1.5em;
+}
+
+#rightGutterContent {
+	padding: 30px 20px 0px 15px;
+	min-height: 450px; /* used to the gradient isn't abruptly cut off in Safari and Firefox */
+}
+#rightGutter {
+	margin-left: 68%;
+/*	position: relative;
+	top: -5px;*/
+	margin-top: -6px;/*change to negative margin so autocomplete works right*/
+	border-bottom: 1px solid white;/* for ie */
+	border-left: 1px solid white;
+}
+* html #rightGutter {/*for ie, treats height as min-height */
+	position: relative;
+	top: -1px;
+}
+* html #rightGutterContent {
+	height: 450px;
+}
+
+/*for left gutter layout*/
+#bigRightColumn {
+	float:left;
+	width: 67%;
+	margin-left: 2em;
+ }
+
+#bigRightColumn p {
+	line-height: 160%;
+}
+#leftGutter {
+	float: left;
+	width: 28%;
+	margin:0px;
+	padding:0px;
+	position:relative;
+	top: -6px;
+}
+#leftGutterContent {
+	min-height: 450px;
+	margin: 0px;
+}
+* html #leftGutterContent {/*for ie, treats height as min-height*/
+	height: 450px;
+}
+
+#breadcrumb {
+	margin:0px;
+	padding: 0px 0px 0px 35px;
+	position: relative;
+	top: -6px;
+	height: 48px;
+}
+
+/*for fullpage layout*/
+#redfullPage,
+#fullPage {
+	padding:0px 40px 20px 40px;
+/*	position:relative;
+	top:-6px; - this was causing tabs to jump on allDomains page.  changed to negative margin instead to move up*/
+}
+
+#fullPage {
+	margin: -6px 0 0 0px;
+}
+
+#redfullPage {
+	margin: 0px;
+}
+
+/***
+header
+***/
+#header table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#header td {
+	padding: 0px;
+	margin: 0px;
+}
+
+#header img {
+	border: 0;
+}
+
+
+#header #centerbkd {
+	vertical-align: bottom;
+	text-align: right;
+}
+
+#header #userstatus {
+	display: inline;
+	margin-right: 1.5em;
+	font-size: .85em;
+}
+
+#header #navigation {
+	vertical-align: bottom;
+	text-align: right;
+}
+
+#header #signup {
+	text-align: right;
+	vertical-align: middle;
+	height: 33px;
+	width: 295px;
+}
+
+#header #search {
+	text-align: right;
+	vertical-align: middle;
+	width: 295px;
+	height: 37px;
+}
+
+#header .SearchBox {
+	font-size: 12px;
+	padding-bottom: 2px;
+}
+
+.SearchBox div {
+	display:inline;
+	width: 285px;
+}
+
+.SearchBox button {
+	margin: 0px 5px 0px 5px;
+	padding: 1px 4px 1px 4px;
+	font-size: 12px;
+}
+
+
+/***
+PageTitles
+***/
+#PageTitle {
+	padding-top:  30px;
+	margin: 0px 0px 0px 5px;
+	font-size: 1.75em;  /* For pages that use manually coded titles. This needs to visually match the size of #PageTitle .MenuLabel */
+}
+
+#bigLeftColumn #PageTitle {
+	padding-top: 0px;	
+}
+
+#breadcrumb #PageTitle {
+	padding:.5em 0px 0px .2em;
+	margin:0px;
+}
+
+/* Error and success messages */
+.successmessage,
+.errormessage,
+#successmessage,
+.progressmessage {
+	padding: 8px 8px 8px 30px;
+	line-height: 120%;
+	margin: 1em 0 1em 0;
+}
+
+p.successmessage,
+.errormessage p,
+#successmessage p {
+	margin: 3px 0px 0px 0px;
+}
+
+b.successmessage,
+.errormessage b,
+#successmessage b {
+	padding: 1px 1px 1px 20px;
+}
+
+.DateTimeInput .errormessage {
+	padding:0px;
+	margin:0px;
+}
+
+
+
+/***
+footer 
+***/
+
+#basicfooter,
+#footer {
+	padding-top: 50px;
+	width: 100%;
+	clear: both;
+}
+
+#basicfooter ul,
+#footer ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#basicfooter #footernav,
+#footer #footernav{
+	width: 50%;
+	padding: 15px 0px 15px 25px;
+	margin: 0px;
+	float: left;
+}
+
+#basicfooter li,
+#footer li {
+	display: inline;
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+}
+
+
+#basicfooter #cc,
+#footer #cc {
+	margin-left: 55%;
+	font-size: .85em;
+	text-align: right;
+	padding: 15px 15px 15px 0px;
+}

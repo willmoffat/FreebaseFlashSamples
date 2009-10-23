@@ -1,0 +1,32 @@
+<html>
+<head><title>Metaweb Query Editor</title>
+<style> /* CSS styles for nice output */
+#q, #r { width: 400px; height: 300px; border-width:0px;padding:5px;}
+th {background-color:black; color:white; font:bold 12pt sans-serif;}
+td.border,th {border:solid black 3px;}
+input { margin: 5px; font-weight: bold; }
+table { border-collapse: collapse;}
+</style>
+</head>
+<body>
+  <!-- Form makes an HTTP GET request to mqlread, results go in iframe r -->
+  <form action="http://www.freebase.com/api/service/mqlread"
+	method="get"
+	target="r">
+  <!-- Force mqlread to return text/javascript instead of application/json -->
+  <input type="hidden" name="callback" value=" ">
+  <!-- An HTML table to display the query, buttons, and result -->
+  <table> 
+    <tr><th>Query</th><td></td><th>Result</th></tr>    <!-- table header -->
+    <tr>
+      <td class="border">
+	<textarea name="query" id="q"></textarea></td> <!-- enter query -->
+      <td valign="top"> 
+	<input type="submit" value="Send"><br>         <!-- send query -->
+	<input type="reset" value="Erase"></td>        <!-- erase query  -->
+      <td class="border">
+	<iframe name="r" id="r"></iframe></td>         <!-- results go here -->
+    </tr>
+  </table>
+</body>
+</html>

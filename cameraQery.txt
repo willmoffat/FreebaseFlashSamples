@@ -1,0 +1,14 @@
+{
+  "query":[{
+    "*":null,
+    "digital_zoom_capability":[{}],
+    "dimensions":[{}],
+    "image_stabilization_capability":[{}],
+    "max_resolution":[{}],
+    "name":null,
+    "other_resolutions":[{}],
+    "sensor_size":[{}],
+    "street_price":[{}],
+    "type":"/digicams/digital_camera"
+  }]
+}
